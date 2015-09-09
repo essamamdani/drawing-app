@@ -40,9 +40,9 @@ $canvas.mousedown(function (e) {
     lastevent = e;
     mousedown = true;
 }).mousemove(function (e) {
-    if(mousedown){
+    if (mousedown) {
         context.beginPath();
-        context.moveTo(lastevent.offsetX,lastevent.offsetY);
+        context.moveTo(lastevent.offsetX, lastevent.offsetY);
         context.lineTo(e.offsetX, e.offsetY);
         context.closePath();
         context.strokeStyle = color;
@@ -51,6 +51,12 @@ $canvas.mousedown(function (e) {
     }
 }).mouseup(function () {
     mousedown = false;
-}).mouseleave(function(){
+}).mouseleave(function () {
     $canvas.mouseup();
+});
+
+$("#downloadbtn").on("click", function () {
+    var dt = $canvas[0].toDataURL("image/png");
+    window.location.href = "data:application/octet-stream" + dt.split(";")[1];
+
 });
