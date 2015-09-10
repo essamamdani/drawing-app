@@ -58,7 +58,7 @@ ul li {
     width: 40px;
     height: 40px;
 }
-button {
+button,#downloadbtn {
     background: #68B25B;
     box-shadow: 0 3px 0 0 #6A845F;
     color: #fff;
@@ -68,6 +68,9 @@ button {
     display: block;
     font-size: 16px;
     line-height: 40px;
+    text-decoration: none;
+    text-align: center;
+    min-height: inherit;
 }
 #revealColorSelect,#downloadbtn {
     border: none;
