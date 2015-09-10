@@ -57,6 +57,6 @@ $canvas.mousedown(function (e) {
 
 $("#downloadbtn").on("click", function () {
     var dt = $canvas[0].toDataURL("image/png");
-    window.location.href = "data:application/octet-stream" + dt.split(";")[1];
+    window.location.href = "data:application/octet-stream;" + dt.split(";")[1];
 
 });
